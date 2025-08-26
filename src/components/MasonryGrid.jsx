@@ -67,33 +67,31 @@ export default function MasonryGrid() {
       columnClassName="space-y-4"
     >
       {items.map((item) => (
-        <motion.a
+        <a
           key={item.id}
           href={item.link}
-          className="block relative rounded-lg shadow hover:shadow-xl transition overflow-hidden group"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="block relative rounded-lg shadow hover:shadow-lg transition overflow-hidden"
         >
-          {/* Image */}
           <img
             src={item.image}
             alt={item.name}
-            className="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500"
+            className="w-full h-auto"
           />
 
-          {/* Overlay with animation */}
+          {/* Overlay text positioned bottom-left */}
           <motion.div
-            className="absolute top-1/2 left-6 -translate-y-1/2 bg-black/50 px-4 py-2 rounded-2xl flex items-center gap-2 backdrop-blur-sm"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="absolute bottom-6 left-4 bg-black/40 px-3 py-2 rounded-lg flex items-center gap-2"
           >
-            <p className="text-white font-semibold text-lg">{item.name}</p>
-            <ArrowRight className="text-white w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            <p className="text-white font-semibold text-sm sm:text-base md:text-lg">
+              {item.name}
+            </p>
+            <ArrowRight className="text-white w-4 h-4 sm:w-5 sm:h-5" />
           </motion.div>
-        </motion.a>
+        </a>
       ))}
     </Masonry>
   );
