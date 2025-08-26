@@ -11,7 +11,7 @@ function Home() {
           <p className='text-lg mb-6'>Our curated collection of modern essentials helps you build a wardrobe that works for you.</p>
           <div className='absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer'>
             <button className='bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-400 transition mb-2'>
-              Explore the Collection
+              Explore Category
             </button>
             <ChevronDown className='text-white animate-bounce' size={32} />
           </div>
