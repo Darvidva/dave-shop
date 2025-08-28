@@ -16,15 +16,16 @@ export default function NewArrivals() {
   ];
 
   return (
-    <section className="py-12 px-6 bg-white">
+    <section className="py-12 px-3 bg-white">
       <h2 className="text-2xl font-bold text-center mb-2">New Arrivals</h2>
-      <p className="text-center text-gray-600 mb-8">
+      <div className="w-25 h-1.25 bg-red-500 rounded mx-auto"></div>
+      <p className="text-center text-gray-600 sm:text-lg mb-6">
         Exlore our latest collection, carefully selected to keep your style fresh.
       </p>
 
       {/* Grid wrapper */}
       <div
-        className={`grid grid-cols-2 md:grid-cols-4 gap-6 relative transition-all duration-500 overflow-hidden ${
+        className={`grid grid-cols-2 md:grid-cols-4 gap-3 relative transition-all duration-500 overflow-hidden ${
           expanded ? "max-h-full" : "max-h-[600px] md:max-h-full"
         }`}
       >
