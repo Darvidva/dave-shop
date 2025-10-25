@@ -16,10 +16,10 @@ export default function Footer() {
         </div>
 
         {/* Navigation */}
-        <div className="flex flex-col items-center md:items-start 
+        <div className="flex flex-col items-center md:items-left
                         pb-6 md:pb-0 border-b md:border-b-0 md:border-r border-gray-300 px-0 md:px-6">
           <h2 className="text-lg font-bold mb-2">Navigation</h2>
-          <div className="flex flex-col space-y-2 text-center md:text-left">
+          <div className="flex flex-col space-y-2 text-left md:text-center">
             <a href="#" className="hover:text-red-500">Home</a>
             <a href="#" className="hover:text-red-500">Collection</a>
             <a href="#" className="hover:text-red-500">About</a>
@@ -39,7 +39,7 @@ export default function Footer() {
               className="p-2 border border-gray-300 rounded-lg focus:outline-none w-4/5 md:w-full"
             />
             <button 
-              className="text-black border border-gray-400 px-2 py-2 rounded-full 
+              className="text-black border border-red-600 px-2 py-2 rounded-full 
                         hover:bg-red-600 hover:text-white transition w-3/5 mx-auto">
               Subscribe
             </button>
@@ -49,11 +49,11 @@ export default function Footer() {
         {/* Social Icons */}
         <div className="flex flex-col items-center px-0 md:px-6">
           <h2 className="text-lg font-bold mb-2 text-center">Follow Us</h2>
-          <div className="flex space-x-4 text-2xl ">
-            <a href="#" className="hover:text-red-500"><Facebook /></a>
-            <a href="#" className="hover:text-red-500"><Twitter /></a>
-            <a href="#" className="hover:text-red-500"><Instagram /></a>
-            <a href="#" className="hover:text-red-500"><Linkedin /></a>
+          <div className="flex space-x-4 text-2xl text-red-600">
+            <a href="#" className="hover:text-black"><Facebook /></a>
+            <a href="#" className="hover:text-black"><Twitter /></a>
+            <a href="#" className="hover:text-black"><Instagram /></a>
+            <a href="#" className="hover:text-black"><Linkedin /></a>
           </div>
         </div>
       </div>
