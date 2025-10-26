@@ -7,14 +7,14 @@ export default function NewArrivals() {
   const [expanded, setExpanded] = useState(false);
 
   const products = [
-    { id: 1, name: "Cool Jacket", price: 59.99, img: "https://img-1.kwcdn.com/thumbnail/s/7d415aa73ee3f3710c0f404b5a4d56ac_888939032ed7.jpg?imageView2/2/w/1300/q/80/format/webp" },
-    { id: 2, name: "Addidas", price: 29.99, img: "https://images.lifestyleasia.com/wp-content/uploads/sites/2/2024/02/22145404/clot-adidas-superstar-unboxing-release-info-000.jpg" },
-    { id: 3, name: "Mermaid Gown", price: 89.99, img: "https://img-1.kwcdn.com/thumbnail/s/8207053a501563a6a3932a75b618a236_0e38f4703d2a.jpg?imageView2/2/w/800/q/70/format/webp" },
-    { id: 4, name: "Wrist Watch", price: 120.0, img: "https://img.kwcdn.com/product/fancy/5dadd846-98d2-4f5a-b9cd-cae7dba11acc.jpg?imageView2/2/w/800/q/70/format/webp" },
-    { id: 5, name: "Men's Suit", price: 74.5, img: "https://img.kwcdn.com/product/fancy/c9f86c00-afc3-4e54-a656-0dfce2978ff1.jpg?imageView2/2/w/800/q/70/format/webp" },
-    { id: 6, name: "Denim Jacket", price: 45.0, img: "https://img.kwcdn.com/product/fancy/b5511a3f-15f2-49f2-8f49-e4d7594f15bc.jpg?imageView2/2/w/800/q/70/format/webp" },
-    { id: 7, name: "Straight Jeans", price: 18.0, img: "https://img.kwcdn.com/product/fancy/55bc6e1f-5c4e-400b-b168-ae7ffb1617e9.jpg?imageView2/2/w/800/q/70/format/webp" },
-    { id: 8, name: "Casual Hoodie", price: 65.0, img: "https://img.kwcdn.com/product/fancy/bfaf9327-9607-433f-a529-da2b26ea61b0.jpg?imageView2/2/w/800/q/70/format/webp" },
+    { id: 1, name: "Cool Jacket", price: 59990, img: "https://img-1.kwcdn.com/thumbnail/s/7d415aa73ee3f3710c0f404b5a4d56ac_888939032ed7.jpg?imageView2/2/w/1300/q/80/format/webp" },
+    { id: 2, name: "Addidas", price: 29990, img: "https://images.lifestyleasia.com/wp-content/uploads/sites/2/2024/02/22145404/clot-adidas-superstar-unboxing-release-info-000.jpg" },
+    { id: 3, name: "Mermaid Gown", price: 8999, img: "https://img-1.kwcdn.com/thumbnail/s/8207053a501563a6a3932a75b618a236_0e38f4703d2a.jpg?imageView2/2/w/800/q/70/format/webp" },
+    { id: 4, name: "Wrist Watch", price: 12000, img: "https://img.kwcdn.com/product/fancy/5dadd846-98d2-4f5a-b9cd-cae7dba11acc.jpg?imageView2/2/w/800/q/70/format/webp" },
+    { id: 5, name: "Men's Suit", price: 7545, img: "https://img.kwcdn.com/product/fancy/c9f86c00-afc3-4e54-a656-0dfce2978ff1.jpg?imageView2/2/w/800/q/70/format/webp" },
+    { id: 6, name: "Denim Jacket", price: 450000, img: "https://img.kwcdn.com/product/fancy/b5511a3f-15f2-49f2-8f49-e4d7594f15bc.jpg?imageView2/2/w/800/q/70/format/webp" },
+    { id: 7, name: "Straight Jeans", price: 18000, img: "https://img.kwcdn.com/product/fancy/55bc6e1f-5c4e-400b-b168-ae7ffb1617e9.jpg?imageView2/2/w/800/q/70/format/webp" },
+    { id: 8, name: "Casual Hoodie", price: 65000, img: "https://img.kwcdn.com/product/fancy/bfaf9327-9607-433f-a529-da2b26ea61b0.jpg?imageView2/2/w/800/q/70/format/webp" },
   ];
 
   return (
@@ -43,7 +43,7 @@ export default function NewArrivals() {
             />
             <div className="p-4 text-center">
               <h3 className="text-base font-semibold mb-1">{p.name}</h3>
-              <p className="text-red-600 font-bold mb-3">${p.price}</p>
+              <p className="text-red-600 font-bold mb-3">₦{p.price}</p>
               <button
                 onClick={() => addToCart(p)}
                 className="px-4 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-700 transition"

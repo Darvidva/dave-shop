@@ -1,12 +1,18 @@
-import { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
-const CartContext = createContext();
+const CartContext = createContext({
+  cart: [],
+  addToCart: () => {},
+  removeFromCart: () => {},
+  deleteFromCart: () => {},
+  cartCount: 0,
+});
 
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
-    setCartItems((prev) => {
+    setCart((prev) => {
       const existing = prev.find((item) => item.id === product.id);
       if (existing) {
         return prev.map((item) =>
@@ -19,42 +25,27 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  const increaseQuantity = (id) => {
-    setCartItems((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-      )
-    );
-  };
-
-  const decreaseQuantity = (id) => {
-    setCartItems((prev) =>
+  const removeFromCart = (id) => {
+    setCart((prev) =>
       prev
         .map((item) =>
-          item.id === id && item.quantity > 1
-            ? { ...item, quantity: item.quantity - 1 }
+          item.id === id
+            ? { ...item, quantity: Math.max(item.quantity - 1, 0) }
             : item
         )
         .filter((item) => item.quantity > 0)
     );
   };
 
-  const removeItem = (id) => {
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
+  const deleteFromCart = (id) => {
+    setCart((prev) => prev.filter((item) => item.id !== id));
   };
 
-  const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  const cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <CartContext.Provider
-      value={{
-        cartItems,
-        cartCount,
-        addToCart,
-        increaseQuantity,
-        decreaseQuantity,
-        removeItem,
-      }}
+      value={{ cart, addToCart, removeFromCart, deleteFromCart, cartCount }}
     >
       {children}
     </CartContext.Provider>
