@@ -5,11 +5,11 @@ import NewArrivals from '../NewArrivalsSection'
 
 function Homepage() {
   return (
-    <>
-        <Home />
-        <Category />
-        <NewArrivals />
-    </>
+  <>
+    <Home />
+    <Category />
+    <NewArrivals />
+  </>
   )
 }
 

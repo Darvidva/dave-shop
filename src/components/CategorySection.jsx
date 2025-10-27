@@ -3,7 +3,7 @@ import MasonryGrid from "./MasonryGrid";
 
 function Category() {
   return (
-    <div>
+    <section id="category">
       <div className="text-center mb-5">
          <h2 className='text-2xl font-bold py-2'>Category</h2>
          <div className="w-16 h-1.25 bg-red-500 rounded mx-auto"></div>
@@ -12,7 +12,7 @@ function Category() {
          <div className="p-3 min-h-screen">
             <MasonryGrid />
         </div>
-    </div>
+    </section>
   )
 }
 

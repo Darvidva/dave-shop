@@ -7,3 +7,8 @@ body {
   box-sizing: border-box;
   background-color: rgb(255, 249, 237);
 }
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}

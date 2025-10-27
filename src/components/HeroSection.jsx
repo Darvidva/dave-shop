@@ -2,7 +2,7 @@ import { ChevronDown } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative h-[80vh] md:h-screen w-full overflow-hidden">
+    <section id="home" className="relative h-[80vh] md:h-screen w-full overflow-hidden">
       {/* Hero image with left-biased focal point on mobile */}
       <img
         src="/hero.jpg"
