@@ -14,6 +14,7 @@ export default function NavBar() {
 
   // Detect current route
   const isContactPage = location.pathname === "/contact";
+  const isCollectionPage = location.pathname === "/collection";
 
   // Scroll detection for other pages
   useEffect(() => {
@@ -26,7 +27,7 @@ export default function NavBar() {
   const handleNavClick = () => setIsMenuOpen(false);
 
   // Navbar style logic
-  const navbarStyle = isContactPage
+  const navbarStyle = isContactPage || isCollectionPage
     ? "bg-white text-black" // Contact page: white background, white text
     : isScrolled
     ? "bg-white text-black shadow-md"
@@ -35,7 +36,7 @@ export default function NavBar() {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       <div
-        className={`max-w-full mx-auto flex justify-between items-center px-4 md:px-10 py-3 ${navbarStyle}`}
+        className={`max-w-full mx-auto flex justify-between items-center px-4 md:px-4 py-1 ${navbarStyle}`}
       >
         {/* Mobile menu button */}
         <div className="md:hidden">
@@ -109,7 +110,7 @@ export default function NavBar() {
           isMenuOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         } ${navbarStyle}`}
       >
-        <ul className="flex flex-col items-center py-4 text-lg font-semibold">
+        <ul className="flex flex-col items-center text-lg font-semibold">
           <li className="my-2">
             <NavLink to="/" end onClick={handleNavClick}>
               Home

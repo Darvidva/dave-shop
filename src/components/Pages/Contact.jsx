@@ -142,7 +142,7 @@ export default function Contact() {
                 animate={{ opacity: 1 }}
                 className="text-green-600 text-center mt-2"
               >
-                ✅ Message sent successfully! We’ll get back to you shortly.
+                Message sent successfully! We’ll get back to you shortly.
               </motion.p>
             )}
           </form>
