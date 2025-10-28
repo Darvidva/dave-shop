@@ -40,7 +40,7 @@ export default function Contact() {
 
         {/* About Section */}
         <div className="mb-8 p-4 bg-gray-100 rounded-lg">
-          <h3 className="text-xl font-bold mb-2">About Dave Shop</h3>
+          <h3 className="text-xl font-bold mb-2 text-center">About Dave Shop</h3>
           <p className="text-gray-700">
             Dave Shop is dedicated to making modern, high-quality clothing
             accessible. We curate pieces with care and deliver them quickly to
