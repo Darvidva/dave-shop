@@ -45,7 +45,7 @@ export default function Contact() {
             Dave Shop is dedicated to making modern, high-quality clothing
             accessible. We curate pieces with care and deliver them quickly to
             your door. Our mission is to help you build a wardrobe that works
-            for you — with effortless style and excellent service.
+            for you, with effortless style and excellent service.
           </p>
         </div>
 
