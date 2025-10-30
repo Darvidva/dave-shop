@@ -35,7 +35,7 @@ export default function Contact() {
       >
         <h2 className="text-3xl font-semibold text-gray-800 mb-2">Contact Us</h2>
         <p className="text-gray-600 mb-4">
-          Have questions about your order or a product? Our team is here to help!
+          Have questions about your order or a product? Our team is here to help.
         </p>
 
         {/* About Section */}
